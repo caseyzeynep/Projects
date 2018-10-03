@@ -2,14 +2,23 @@
 Feature('Test2');
 
 Scenario('home', async (I,detailedSearchPage) => {
-	I.amOnPage('https://www.sahibinden.com/arama/detayli?category=221415');
-    //detailedSearchPage.selectCategory();
+	I.amOnPage('/');
+	detailedSearchPage.enterDetailedSearch();
+    detailedSearchPage.selectCategory();
     detailedSearchPage.selectYear();
     detailedSearchPage.selectColor();
     detailedSearchPage.selectSecurity();
+    detailedSearchPage.submitSearch();
+
+    let result = await I.grabTextFrom('//*[@id="saveSearchResult"]');
     
-    //let b = await I.grabTextFrom('//*[@id="saveSearchResult"]');
-    //console.log(b);
-    //pause();
+    if( new String(result).valueOf() == new String('Arama filtrelerinize uygun ilan bulunamadı.').valueOf() )
+    {
+    	console.log("    PASS");
+    }
+    else
+    {
+    	console.log("    FAIL");
+    }
 
 });
