@@ -1,0 +1,28 @@
+{
+  "output": "./output",
+  "helpers": {
+    "WebDriverIO": {
+      "url": "https://www.sahibinden.com/",
+      "browser": "chrome",
+      "windowSize": "maximize"
+    }
+  },
+  "include": {
+    "homePage": "./pages/home.js",
+    "detailedSearchPage": "./pages/detailedSearch.js",
+    "searchPage": "./pages/search.js"
+  },
+  "mocha": {},
+  "bootstrap": false,
+  "teardown": null,
+  "hooks": [],
+  "gherkin": {},
+  "plugins": {
+    "screenshotOnFail": {
+      "enabled": true
+    }
+  },
+  "tests": "./*_test.js",
+  "timeout": 10000,
+  "name": "zeynep"
+}
