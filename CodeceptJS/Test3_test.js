@@ -11,9 +11,19 @@ Data(search1.filter(search1 => search1.searchText == 'Yamaha MT07')).Scenario('t
 	I.amOnPage('/');
     I.fillField('#searchText', current.searchText);
     I.click('//*[@id="searchSuggestionForm"]/button');
+
+    let prevResult = await I.grabTextFrom('//*[@id="wideContainer"]/div/div[2]/ul/li[1]/ul/li[1]/a/span/span');
     I.click('//*[@id="wideContainer"]/div/div[2]/ul/li[1]/ul/li[1]/a');
-    let b = await I.grabTextFrom('//*[@id="searchResultsSearchForm"]/div/div[3]/div[1]/div[1]/div[1]/div[1]/span');
-    console.log(b);
+    let nextResult = await I.grabTextFrom('//*[@id="searchResultsSearchForm"]/div/div[3]/div[1]/div[1]/div[1]/div[1]/span');
+
+    if( new String(prevResult).valueOf() == new String(nextResult).valueOf() )
+    {
+        console.log("    PASS");
+    }
+    else
+    {
+        console.log("    FAIL");
+    }
 
 });
 
@@ -21,10 +31,9 @@ Data(search1.filter(search1 => search1.searchText != 'Yamaha MT07')).Scenario('t
 
 	I.amOnPage('/');
     I.fillField('#searchText', current.searchText);
-    //I.click('//*[@id="searchSuggestionForm"]/button');
-    //I.click('//*[@id="wideContainer"]/div/div[2]/ul/li[1]/ul/li[1]/a');
-    //let b = await I.grabTextFrom('//*[@id="searchResultsSearchForm"]/div/div[3]/div[1]/div[1]/div[1]/div[1]/span');
-    //console.log(b);
+    I.click('//*[@id="searchSuggestionForm"]/button');
+    let numberOfResult = await I.grabTextFrom('//*[@id="searchResultsSearchForm"]/div/div[3]/div[1]/div[1]/div[1]/div[1]/span');
+    console.log(numberOfResult);
 
 });
 
