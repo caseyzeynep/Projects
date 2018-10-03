@@ -1,12 +1,12 @@
 
 Feature('Test3');
 
-let search1 = new DataTable(['searchText']); 
-	search1.add(['Yamaha MT07']); 
-	search1.add(['Yamaha MT09']);
-	search1.add(['Yamaha MT25']);
+let searches = new DataTable(['searchText']); 
+	searches.add(['Yamaha MT07']); 
+	searches.add(['Yamaha MT09']);
+	searches.add(['Yamaha MT25']);
 
-Data(search1.filter(search1 => search1.searchText == 'Yamaha MT07')).Scenario('test something', async (I,current) => {
+Data(searches.filter(searches => searches.searchText == 'Yamaha MT07')).Scenario('test something', async (I,current) => {
 
 	I.amOnPage('/');
     I.fillField('#searchText', current.searchText);
@@ -27,7 +27,7 @@ Data(search1.filter(search1 => search1.searchText == 'Yamaha MT07')).Scenario('t
 
 });
 
-Data(search1.filter(search1 => search1.searchText != 'Yamaha MT07')).Scenario('test something', async (I,current) => {
+Data(searches.filter(searches => searches.searchText != 'Yamaha MT07')).Scenario('test something', async (I,current) => {
 
 	I.amOnPage('/');
     I.fillField('#searchText', current.searchText);
