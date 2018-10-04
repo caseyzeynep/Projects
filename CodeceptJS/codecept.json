@@ -8,9 +8,8 @@
     }
   },
   "include": {
-    "homePage": "./pages/home.js",
-    "detailedSearchPage": "./pages/detailedSearch.js",
-    "searchPage": "./pages/search.js"
+    "homePage": "/Users/zeynep/Projects/CodeceptJS/pages/home.js",
+    "detailedSearchPage": "/Users/zeynep/Projects/CodeceptJS/pages/detailedSearch.js"
   },
   "mocha": {},
   "bootstrap": false,
@@ -22,7 +21,7 @@
       "enabled": true
     }
   },
-  "tests": "./*_test.js",
+  "tests": "/Users/zeynep/Projects/CodeceptJS/Test3_test.js",
   "timeout": 10000,
   "name": "zeynep"
 }
