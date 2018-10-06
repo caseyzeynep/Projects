@@ -3,7 +3,7 @@ const frisby = require('frisby');
 const Joi = frisby.Joi;
 
 
-it('should be a teapot', function () {
+it('Country Test', function () {
   return frisby.get('http://services.groupkt.com/country/get/all')
     .expect('status', 200)
 
@@ -20,10 +20,10 @@ it('should be a teapot', function () {
         sortedData.sort(function (a, b) {
         return a.name.localeCompare(b.name);
         });
-        //for( i = 0; i <249; i++)
-        //{
-            //console.log(sortedData[i].name + " " + res.json.RestResponse.result[i].name);
-         //}
+        for( i = 0; i <res.json.RestResponse.result.length; i++)
+        {
+            console.log(sortedData[i].name + " " + res.json.RestResponse.result[i].name);
+        }
         expect(res.json.RestResponse.result).toEqual(sortedData); 
       })
 
