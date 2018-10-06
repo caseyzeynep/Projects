@@ -3,7 +3,7 @@ const frisby = require('frisby');
 const Joi = frisby.Joi;
 
 
-it('should be a teapot', function () {
+it('USA Test', function () {
   return frisby.get('http://services.groupkt.com/state/get/USA/all')
 
     .expect('status', 200)
