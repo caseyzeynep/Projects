@@ -11,12 +11,22 @@ it('should be a teapot', function () {
     .expect('jsonTypes', 'RestResponse.result.?', {})
     .then(function (res) {
         expect(res.json.RestResponse.result.length).toEqual(249)
-        let data = res.json.RestResponse.result;
-        data.sort(function (a, b) {
+        var sortedData = new Array(res.json.RestResponse.result.length);
+        let i;
+        for( i = 0; i <res.json.RestResponse.result.length; i++)
+        {
+            sortedData[i] = res.json.RestResponse.result[i];
+         }
+        sortedData.sort(function (a, b) {
         return a.name.localeCompare(b.name);
         });
-        expect(res.json.RestResponse.result).toEqual(data); 
+        //for( i = 0; i <249; i++)
+        //{
+            //console.log(sortedData[i].name + " " + res.json.RestResponse.result[i].name);
+         //}
+        expect(res.json.RestResponse.result).toEqual(sortedData); 
       })
+
     .expect('json', 'RestResponse.result.?', {name : "Turkey"})
     .expect('json', 'RestResponse.result.?', {alpha2_code : "TR"})
     .expect('json', 'RestResponse.result.?', {alpha3_code : "TUR"})
