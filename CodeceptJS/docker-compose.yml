@@ -1,0 +1,35 @@
+version: '3'
+services:
+  test-acceptance.webdriverio:
+    build: ..
+    env_file: .env
+    environment:
+      - CODECEPT_ARGS=-c codecept.WebDriverIO.js --grep @WebDriverIO --debug
+    depends_on:
+      - php
+      - selenium.chrome
+    volumes:
+      - ./acceptance:/tests
+      - ./data:/data
+      - ./support:/support
+      - node_modules:/node_modules
+  codeceptjs:
+    image: codeception/codeceptjs
+    depends_on:
+      - chrome
+      - web
+    volumes:
+      - .:/tests
+  web:
+    image: node
+    command: node app/server.js
+    volumes:
+      - .:/app
+  chrome:
+    image: selenium/standalone-chrome
+    ports:
+      - '4444'
+      - '5900'
+
+
+

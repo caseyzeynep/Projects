@@ -3,6 +3,7 @@
   "helpers": {
     "WebDriverIO": {
       "url": "https://www.sahibinden.com/",
+      "host":"selenium",
       "browser": "chrome",
       "windowSize": "maximize"
     }
@@ -11,7 +12,7 @@
     "homePage": "./pages/home.js",
     "detailedSearchPage": "./pages/detailedSearch.js"
   },
-       "multiple": {
+    "multiple": {
   	"parallel": {
     	"chunks": 2,
     	"browsers": ["chrome", "firefox"]
