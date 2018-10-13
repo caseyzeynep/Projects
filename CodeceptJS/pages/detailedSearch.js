@@ -5,7 +5,7 @@ module.exports = {
 
   fields: {
     detailSearch: '#searchSuggestionForm > a',
-    vehicle: '//*[@href="/arama/detayli?category=3517"]',
+    vehicle: '/html/body/div[4]/div[2]/div[1]/div/div[1]/div/div/form/div/div/div/table/tbody/tr/td[2]/div/div/div/div/div/div/div/div/ul/li[3]',
     motorcycles: '//*[@href="/arama/detayli?category=3532"]',
     yamaha: '//*[@href="/arama/detayli?category=11757"]',
     MT07ATS: './/*[@href="/arama/detayli?category=221415"]',
@@ -19,6 +19,9 @@ module.exports = {
   },
   submitButton: {css: '#detailedSearchForm > p > button'},
 
+
+ 
+
   //Detaylı Arama sayfasına geçiş
   enterDetailedSearch()
   {
@@ -29,27 +32,27 @@ module.exports = {
   selectCategory()
   {
     I.click(this.fields.vehicle);
-	I.click(this.fields.motorcycles);
-	I.moveCursorTo(this.fields.yamaha,390,-1305);
-	I.click(this.fields.yamaha);
-	I.moveCursorTo(this.fields.MT07ATS,275,-295);
-	I.click(this.fields.MT07ATS); 
+  	I.click(this.fields.motorcycles);
+  	I.moveCursorTo(this.fields.yamaha,390,-1300);
+  	I.click(this.fields.yamaha);
+  	I.moveCursorTo(this.fields.MT07ATS,270,-300);
+  	I.click(this.fields.MT07ATS); 
   },
 
   //Yıl:1998-1999
   selectYear()
   {
-	I.fillField(this.fields.minYear, '1998');
-	I.fillField(this.fields.maxYear, '1999'); 
+  	I.fillField(this.fields.minYear, '1998');
+  	I.fillField(this.fields.maxYear, '1999'); 
   },
 
   //Renk:Gri
   selectColor()
   {
-	I.scrollTo(this.fields.scr);
-	I.click(this.fields.color);    
-	I.checkOption(this.fields.grey);
-	I.click(this.fields.color);
+  	I.scrollTo(this.fields.scr);
+  	I.click(this.fields.color);    
+  	I.checkOption(this.fields.grey);
+  	I.click(this.fields.color);
   },
 
   //Güvenlik: Çekiş Kontrolü 

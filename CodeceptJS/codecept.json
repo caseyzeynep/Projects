@@ -3,8 +3,8 @@
   "helpers": {
     "WebDriverIO": {
       "url": "https://www.sahibinden.com/",
-      "host":"selenium",
       "browser": "chrome",
+      "host":"selenium-hub",
       "windowSize": "maximize"
     }
   },

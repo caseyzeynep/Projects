@@ -10,7 +10,7 @@
   "author": "Forrest L Norvell <ogd@aoaioxxysz.net>",
   "license": "UNLICENSED",
   "devDependencies": {
-    "codeceptjs": "^1.4.2",
+    "codeceptjs": "1.1.1",
     "codeceptjs-webdriverio": "^1.1.0",
     "frisby": "^2.1.0",
     "jest": "^23.6.0",

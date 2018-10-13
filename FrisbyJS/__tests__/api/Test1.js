@@ -16,7 +16,7 @@ it('Country Test', function () {
         for( i = 0; i <res.json.RestResponse.result.length; i++)
         {
             sortedData[i] = res.json.RestResponse.result[i];
-         }
+        }
         sortedData.sort(function (a, b) {
         return a.name.localeCompare(b.name);
         });

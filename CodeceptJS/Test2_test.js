@@ -2,7 +2,7 @@
 Feature('Test2');
 
 Scenario('home', async (I,detailedSearchPage) => {
-	I.amOnPage('/');
+	I.amOnPage('sahibinden.com');
 	detailedSearchPage.enterDetailedSearch();
     detailedSearchPage.selectCategory();
     detailedSearchPage.selectYear();
