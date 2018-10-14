@@ -4,7 +4,7 @@
     "WebDriverIO": {
       "url": "localhost",
       "browser": "chrome",
-      "port": 4444,
+      "host": "localhost",
       "windowSize": "maximize"
     }
   },
