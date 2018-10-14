@@ -6,7 +6,7 @@ let searches = new DataTable(['searchText']);
 	searches.add(['Yamaha MT09']);
 	searches.add(['Yamaha MT25']);
 
-Data(searches.filter(searches => searches.searchText == 'Yamaha MT07')).Scenario('test something', async (I,current) => {
+Data(searches.filter(searches => searches.searchText == 'Yamaha MT07')).Scenario('Test3', async (I,current) => {
 
 	I.amOnPage('https://www.sahibinden.com/');
     I.fillField('#searchText', current.searchText);
@@ -27,7 +27,7 @@ Data(searches.filter(searches => searches.searchText == 'Yamaha MT07')).Scenario
 
 });
 
-Data(searches.filter(searches => searches.searchText != 'Yamaha MT07')).Scenario('test something', async (I,current) => {
+Data(searches.filter(searches => searches.searchText != 'Yamaha MT07')).Scenario('Test3', async (I,current) => {
 
 	I.amOnPage('https://www.sahibinden.com/');
     I.fillField('#searchText', current.searchText);

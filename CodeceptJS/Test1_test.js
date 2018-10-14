@@ -1,7 +1,7 @@
 
 Feature('Test1');
 
-Scenario('home', async (I,homePage) => {
+Scenario('Test1', async (I,homePage) => {
 	
     I.amOnPage('https://www.sahibinden.com/');
     homePage.seeHeader();

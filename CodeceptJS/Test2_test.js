@@ -1,7 +1,7 @@
 
 Feature('Test2');
 
-Scenario('home', async (I,detailedSearchPage) => {
+Scenario('Test2', async (I,detailedSearchPage) => {
 	I.amOnPage('https://www.sahibinden.com/');
 	detailedSearchPage.enterDetailedSearch();
     detailedSearchPage.selectCategory();
