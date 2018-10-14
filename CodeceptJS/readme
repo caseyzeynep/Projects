@@ -19,7 +19,7 @@ To run with selenium-hub and docker
 
 install docker
 
-condecept.json file add  "host": "selenium-hub", 
+In condecept.json file add  "host": "selenium-hub", 
 
 docker build -t codeception/codeceptjs .
 

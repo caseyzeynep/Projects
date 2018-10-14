@@ -9,4 +9,6 @@ npm install npm@latest -g
 
 npm install -g codeceptjs webdriverio
 
-npm install frisby --save-dev
+npm install -g selenium-standalone
+
+selenium-standalone install
