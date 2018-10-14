@@ -8,7 +8,7 @@ let searches = new DataTable(['searchText']);
 
 Data(searches.filter(searches => searches.searchText == 'Yamaha MT07')).Scenario('test something', async (I,current) => {
 
-	I.amOnPage('sahibinden.com');
+	I.amOnPage('https://www.sahibinden.com/');
     I.fillField('#searchText', current.searchText);
     I.click('//*[@id="searchSuggestionForm"]/button');
 
@@ -29,7 +29,7 @@ Data(searches.filter(searches => searches.searchText == 'Yamaha MT07')).Scenario
 
 Data(searches.filter(searches => searches.searchText != 'Yamaha MT07')).Scenario('test something', async (I,current) => {
 
-	I.amOnPage('sahibinden.com');
+	I.amOnPage('https://www.sahibinden.com/');
     I.fillField('#searchText', current.searchText);
     I.click('//*[@id="searchSuggestionForm"]/button');
     let numberOfResult = await I.grabTextFrom('//*[@id="searchResultsSearchForm"]/div/div[3]/div[1]/div[1]/div[1]/div[1]/span');

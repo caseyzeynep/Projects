@@ -19,9 +19,6 @@ module.exports = {
   },
   submitButton: {css: '#detailedSearchForm > p > button'},
 
-
- 
-
   //Detaylı Arama sayfasına geçiş
   enterDetailedSearch()
   {

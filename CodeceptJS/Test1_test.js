@@ -3,7 +3,7 @@ Feature('Test1');
 
 Scenario('home', async (I,homePage) => {
 	
-    I.amOnPage('sahibinden.com');
+    I.amOnPage('https://www.sahibinden.com/');
     homePage.seeHeader();
     homePage.seeContainer();
 

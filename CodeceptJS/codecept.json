@@ -2,9 +2,8 @@
   "output": "./output",
   "helpers": {
     "WebDriverIO": {
-      "url": "https://www.sahibinden.com/",
+      "url": "localhost",
       "browser": "chrome",
-      "host":"selenium-hub",
       "windowSize": "maximize"
     }
   },
@@ -30,6 +29,6 @@
   },
 
   "tests": "./*_test.js",
-  "timeout": 10000,
+  "timeout": 100000,
   "name": "zeynep"
 }
