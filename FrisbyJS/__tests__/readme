@@ -4,7 +4,7 @@ Test1.js
 -- Test succesful connection (PASS)
 -- Test content type header is application/json (PASS)
 -- Test Rest Response result is array (PASS)
--- Test Rest Response result contains name equals Turkey alpha2_code equals TR alpha3_code equals TUR (PASS)
+-- Test Rest Response result contains a country whose name equals Turkey, alpha2_code equals TR, and  alpha3_code equals TUR (PASS)
 -- Test Rest Response result lenght is 249 (PASS)
 -- Test Rest Response is sorted according to name (FAIL) compares the sorted array and actual array and shows the differences
 
@@ -21,8 +21,8 @@ Test3.js
 
 -- Connect http://services.groupkt.com/country/get/all (PASS)
 -- Test succesful connection (PASS)
--- Test contains a coutry whose name 'India' (PASS)
+-- Test contains a coutry whose name is India (PASS)
 -- Finds 'India' alpha3_code 
--- Connect http://services.groupkt.com/state/get/' + (India_alpha3_code) + '/all' (PASS)
+-- Connect http://services.groupkt.com/state/get/{India_alpha3_code}/all (PASS)
 -- Test succesful connection 
--- Test there is a city whose id equals to 65 and largest city isSrinagar Jammu 
+-- Test there is a city whose id equals to 65 and largest city is Srinagar Jammu 
