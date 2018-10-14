@@ -3,10 +3,12 @@
   "helpers": {
     "WebDriverIO": {
       "url": "localhost",
-      "browser": "chrome",
-      "windowSize": "maximize"
+      "browser": "firefox",
+      "windowSize": "maximize",
+      "host":"selenium-hub"
     }
   },
+
   "include": {
     "homePage": "./pages/home.js",
     "detailedSearchPage": "./pages/detailedSearch.js"
@@ -24,11 +26,11 @@
   "gherkin": {},
   "plugins": {
     "screenshotOnFail": {
-      "enabled": true
+      "enabled": false
     }
   },
 
-  "tests": "./*_test.js",
-  "timeout": 100000,
+  "tests": "./Test1_test.js",
+  "timeout": 10000,
   "name": "zeynep"
 }

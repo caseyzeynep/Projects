@@ -2,10 +2,12 @@ FROM codeception/codeceptjs
 
 COPY ./ /codecept
 
+#RUN mkdir /tests
+
 WORKDIR /tests
 
 RUN cd /tests/
 
-CMD ccodeceptjs run-multiple parallel
+CMD codeceptjs run-multiple parallel
 
 
