@@ -6,6 +6,6 @@ WORKDIR /tests
 
 RUN cd /tests/
 
-CMD codeceptjs run --steps
+CMD ccodeceptjs run-multiple parallel
 
 

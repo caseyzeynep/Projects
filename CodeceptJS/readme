@@ -1,0 +1,38 @@
+Installation and running selenium-standalone
+
+npm install -g selenium-standalone
+selenium-standalone install
+selenium-standalone start
+
+Installation and running codeceptjs
+
+npm install -g codeceptjs webdriverio
+
+codeceptjs run --steps
+
+If you want to run multiple browsers
+
+codeceptjs run-multiple parallel
+
+
+To run with selenium-hub and docker
+
+install docker 
+
+docker build -t codeception/codeceptjs .
+
+
+docker network create grid
+
+docker run -d -p 4444:4444 --net grid --name selenium-hub selenium/hub:3.11.0-dysprosium
+
+docker run -d --net grid -e HUB_HOST=selenium-hub -v /dev/shm:/dev/shm selenium/node-chrome:3.11.0-dysprosium
+
+docker run -d --net grid -e HUB_HOST=selenium-hub -v /dev/shm:/dev/shm selenium/node-firefox:3.11.0-dysprosium
+
+To learn image name chrome and firefox
+docker ps --all
+
+docker run -it --rm -v $PWD:/tests/ --link {chrome_image_name}:chrome --link {firefox_image_name}:firefox --net grid codeception/codeceptjs
+
+
