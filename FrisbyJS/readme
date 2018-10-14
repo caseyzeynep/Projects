@@ -1,1 +1,17 @@
-readme
+
+FrisbyJs Installation
+
+-- npm install frisby --save-dev
+
+Jest Installation
+
+-- npm install --save-dev jest
+
+By default, Jest looks for a folder named __tests__. If it does not exist in your project yet, go ahead and create it:
+
+-- mkdir -p __tests__/api
+
+Running test command
+
+-- ./node_modules/.bin/jest 
+
