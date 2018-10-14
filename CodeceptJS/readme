@@ -17,7 +17,9 @@ codeceptjs run-multiple parallel
 
 To run with selenium-hub and docker
 
-install docker 
+install docker
+
+condecept.json file add  "host": "selenium-hub", 
 
 docker build -t codeception/codeceptjs .
 
